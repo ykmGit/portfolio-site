@@ -165,42 +165,41 @@ body {
 }
 
 /*画面幅900px以上の追加指定*/
-@media screen and (min-width:900px) {
+/* @media screen and (min-width:900px) { */
 
-  /* header {
+/* header {
     position: fixed;
     left: 0px;
     top: 0px;
   } */
 
-  html,
+/* html,
   body {
     font-size: 14px;
-    /*基準となるフォントサイズ。*/
-  }
-}
+  } */
+/* } */
 
 /*画面の高さが500px以下の追加指定*/
-@media screen and (max-height:500px) {
+/* @media screen and (max-height:500px) { */
 
-  header {
-    position: absolute;
-    /*メニューが切れて見えなくならないように、fixedを中止する*/
-  }
+/* header {
+    position: absolute; */
+/*メニューが切れて見えなくならないように、fixedを中止する*/
+/* }
 
-}
+} */
 
 /*mainブロック（右側のsectionを囲むブロック）
 ---------------------------------------------------------------------------*/
 
 /*画面幅900px以上の追加指定*/
-@media screen and (min-width:900px) {
+/* @media screen and (min-width:900px) { */
 
-  /* main {
+/* main {
     margin-left: 250px;
   } */
 
-}
+/* } */
 
 /*追加指定ここまで*/
 
@@ -264,16 +263,16 @@ section {
 }
 
 /*画面幅900px以上の追加指定*/
-@media screen and (min-width:900px) {
+/* @media screen and (min-width:900px) { */
 
-  /* #section1,
+/* #section1,
   #section2,
   #section3,
   #section4 {
     border-radius: 3vw 0 0 3vw;
   } */
 
-}
+/* } */
 
 
 
@@ -347,10 +346,44 @@ ul.icons i {
   /*Font Awesomeのアイコンサイズ*/
 }
 
-/*画面幅1025px以下*/
-@media screen and (max-width:819px) {
+/*画面幅819px以下*/
+/* @media screen and (max-width: 819px) {
 
   .profile {
     display: block;
   }
+
+  .mainVisual_inner {
+    width: 64.9vw;
+  }
+
+  #section1 h1 {
+    font-size: 6dvh;
+  }
+} */
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+  html,
+  body {
+    font-size: 20px;
+  }
+
+  .profile {
+    display: block;
+  }
+
+  .profile img {
+    margin: 0;
+    width: 752px;
+  }
+
+  .mainVisual_inner {
+    width: 84.9vw;
+  }
+
+  #section1 h1 {
+    font-size: 6dvh;
+  }
+
 }
