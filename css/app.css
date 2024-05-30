@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+
+/*Google Fontsの読み込み
+---------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap');
+
+/*Font Awesomeの読み込み
+---------------------------------------------------------------------------*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+/*lightbox.cssの読み込み
+---------------------------------------------------------------------------*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.css);
+
+
+.margin-none {
+  margin: 0;
+}
+
+.header {
+  width: 100vw;
+  height: 8vw;
+  padding: 2.9vw 0 0 2.5vw;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffffd9;
+}
+
+.header_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_inner_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 5.5vw;
+  line-height: 4.5vw;
+}
+
+.header_inner_list a {
+  font-size: 1.4vw;
+}
+
+ul {
+  list-style: none;
+}
+
+.header_inner_listItem {
+  margin-left: 2.75vw;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.mainVisual_inner {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  width: 44.9vw;
+  text-align: center;
+  background-color: #fff;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title {
+  font-size: 6dvh;
+  margin: auto;
+}
+
+.subtitle {
+  font-size: 3dvh;
+  margin: auto;
+}
+
+
+.wrap {
+  animation: fadein 3s forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+/*opa1のキーフレーム設定
+---------------------------------------------------------------------------*/
+/* @keyframes opa1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
+
+
+/*animation1のキーフレーム設定（開閉ブロックのアニメーションに使用）
+---------------------------------------------------------------------------*/
+/* @keyframes animation1 {
+  0% {
+    left: -200px;
+  }
+
+  100% {
+    left: 0px;
+  }
+} */
+
+main::before {
+  /* background: url('../img/IMG_8288.JPEG') no-repeat center center / cover; */
+  position: fixed;
+  /* background-image: url(../img/IMG_8288.JPEG); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  width: 100%;
+  z-index: -1;
+  content: '';
+  /* margin-top: 7.9vw; */
+}
+
+.main1-background::before {
+  background-image: url(../img/IMG_8288.JPEG);
+}
+
+.main2-background::before {
+  background-image: url(../img/IMG_8422.JPEG);
+}
+
+body * {
+  box-sizing: border-box;
+  color: #333333;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 13px;
+  /*基準となるフォントサイズ。*/
+}
+
+/*画面幅900px以上の追加指定*/
+@media screen and (min-width:900px) {
+
+  /* header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+  } */
+
+  html,
+  body {
+    font-size: 14px;
+    /*基準となるフォントサイズ。*/
+  }
+}
+
+/*画面の高さが500px以下の追加指定*/
+@media screen and (max-height:500px) {
+
+  header {
+    position: absolute;
+    /*メニューが切れて見えなくならないように、fixedを中止する*/
+  }
+
+}
+
+/*mainブロック（右側のsectionを囲むブロック）
+---------------------------------------------------------------------------*/
+
+/*画面幅900px以上の追加指定*/
+@media screen and (min-width:900px) {
+
+  /* main {
+    margin-left: 250px;
+  } */
+
+}
+
+/*追加指定ここまで*/
+
+
+/*main内のh2*/
+main h2 {
+  font-size: 2.5rem;
+  /*文字サイズを2.5倍*/
+}
+
+/*main内のh3*/
+main h3 {
+  font-size: 1.5rem;
+  /*文字サイズを1.5倍*/
+}
+
+
+
+/*フェード設定*/
+.section::before {
+  opacity: 0;
+  /* 初期状態では非表示 */
+  transition: opacity 1s;
+  /* 1秒かけてフェードイン/フェードアウト */
+}
+
+.section.active::before {
+  opacity: 1;
+  /* フェードイン状態 */
+}
+
+.section.inactive::before {
+  opacity: 0;
+  /* フェードアウト状態 */
+}
+
+/*section要素*/
+section {
+  padding: 2vw 5vw;
+  /*ボックス内の余白。上下、左右への順番。*/
+}
+
+#section1 {
+  height: 100dvh;
+  padding: 5vw;
+  margin: 0 5vw;
+}
+
+/*sectionブロックの共通設定*/
+#section2,
+#section3,
+#section4 {
+  min-height: calc(80dvh - 50px);
+  /*最低の高さ。100dvhは画面の高さ100%のこと。50pxは下のmarginの値。*/
+  /* margin-bottom: 50px; */
+  /*ボックスの下に空けるスペース*/
+  padding: 5vw;
+  /*ボックス内の余白*/
+  margin: 0 5vw;
+  /* margin-top: 7.9vw; */
+}
+
+/*画面幅900px以上の追加指定*/
+@media screen and (min-width:900px) {
+
+  /* #section1,
+  #section2,
+  #section3,
+  #section4 {
+    border-radius: 3vw 0 0 3vw;
+  } */
+
+}
+
+
+
+#section1::before {
+  background: url('../img/IMG_8288.JPEG') no-repeat center center / cover;
+  /*背景画像の読み込み*/
+}
+
+/*section2の設定*/
+#section2 {
+  background-color: rgba(255, 255, 255, 0.84);
+  /*背景色。３つ目までの数字はrgbでの色指定。最後の小数点は透明度。*/
+  /* color: #fff; */
+  /*文字色*/
+}
+
+.profile {
+  display: flex;
+  margin-bottom: 6dvh;
+}
+
+.profile img {
+  width: 300px;
+  /*画像サイズ指定*/
+  margin: 0 0 0 30px;
+  padding: 0;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.profile .text {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*縦向き端末から見た場合に背景画像をチェンジする*/
+@media (orientation: portrait) {
+
+  #section1::before {
+    background-image: url('../img/IMG_8288.JPEG');
+  }
+
+  #section2::before {
+    background-image: url('../img/IMG_8422.JPEG');
+  }
+
+  #section3::before {
+    background-image: url('../img/section3_portrait.jpg');
+  }
+
+}
+
+/*メニュー内にあるソーシャルメディアのアイコン
+---------------------------------------------------------------------------*/
+ul.icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+ul.icons li {
+  margin-right: 10px;
+  /*アイコン同士の余白*/
+}
+
+ul.icons i {
+  font-size: 20px;
+  /*Font Awesomeのアイコンサイズ*/
+}
+
+/*画面幅1025px以下*/
+@media screen and (max-width:819px) {
+
+  .profile {
+    display: block;
+  }
+}
