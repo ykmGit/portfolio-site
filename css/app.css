@@ -366,7 +366,11 @@ ul.icons i {
 
   html,
   body {
-    font-size: 20px;
+    font-size: 30px;
+  }
+
+  .header_inner_list a {
+    font-size: 30px;
   }
 
   .profile {
@@ -383,7 +387,7 @@ ul.icons i {
   }
 
   #section1 h1 {
-    font-size: 6dvh;
+    font-size: 4dvh;
   }
 
 }
